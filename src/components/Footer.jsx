@@ -6,97 +6,95 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-20 bg-brand-dark-blue relative">
-      <div className="max-w-[1440px] px-18 mx-auto flex flex-col gap-12">
-        <div className="grid grid-cols-[repeat(4,_1fr)_1.5fr]">
-          <div className="flex flex-col gap-6 text-grey-0 font-medium ">
-            <Link href="#" className="hover:underline">
-              About Us
-            </Link>
-            <Link href="#" className="hover:underline">
-              Our Company
-            </Link>
-            <Link href="#" className="hover:underline">
-              Contact Us
-            </Link>
-            <Link href="#" className="hover:underline">
-              Career
-            </Link>
+    <footer className="py-12 md:py-20 bg-brand-dark-blue relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-18">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-10 md:mb-12">
+          {/* Column 4 Navigation Columns */}
+          <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
+            <Link href="#" className="hover:underline transition">About Us</Link>
+            <Link href="#" className="hover:underline transition">Our Company</Link>
+            <Link href="#" className="hover:underline transition">Contact Us</Link>
+            <Link href="#" className="hover:underline transition">Career</Link>
           </div>
-          <div className="flex flex-col gap-6 text-grey-0 font-medium ">
-            <Link href="#" className="hover:underline">
-              Products
-            </Link>
+
+          <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
+            <Link href="#" className="hover:underline transition">Products</Link>
+            {/* Add more product links here if needed */}
           </div>
-          <div className="flex flex-col gap-6 text-grey-0 font-medium ">
-            <Link href="#" className="hover:underline">
-              Solutions
-            </Link>
+
+          <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
+            <Link href="#" className="hover:underline transition">Solutions</Link>
+            {/* Add more solution links here if needed */}
           </div>
-          <div className="flex flex-col gap-6 text-grey-0 font-medium ">
-            <Link href="#" className="hover:underline">
-              Testimonials
-            </Link>
+
+          <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
+            <Link href="#" className="hover:underline transition">Testimonials</Link>
+            {/* Add more testimonial links here if needed */}
           </div>
-          <div className="flex flex-col gap-12 text-grey-0 font-medium ">
-            <p>
-              Reach us at {""}
-              <Link href="#" className="hover:underline font-semibold">
+
+          {/* Contact & Socials Column */}
+          <div className="flex flex-col gap-8 text-grey-0 font-medium text-sm md:text-base">
+            <p className="leading-relaxed">
+              Reach us at{" "}
+              <Link 
+                href="mailto:marketanalytics@pbrinsight.com" 
+                className="hover:underline font-semibold transition"
+              >
                 marketanalytics@pbrinsight.com
               </Link>{" "}
               or through our online contact form.
             </p>
 
             <div className="flex items-center gap-6">
-              <a href="#">
+              <a href="#" aria-label="Facebook" className="hover:opacity-70 transition">
                 <Facebook />
               </a>
-              <a href="#">
+              <a href="#" aria-label="LinkedIn" className="hover:opacity-70 transition">
                 <Linkedin />
               </a>
-              <a href="#">
+              <a href="#" aria-label="Instagram" className="hover:opacity-70 transition">
                 <Instagram />
               </a>
-              <a href="#">
+              <a href="#" aria-label="Twitter" className="hover:opacity-70 transition">
                 <Twitter />
               </a>
             </div>
           </div>
         </div>
 
-        <hr className="border-grey-0/30" />
+        <hr className="border-grey-0/30 my-8" />
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-6 font-medium text-grey-0">
-            <p className="">©{year} PBR Life Sciences.</p>
-            <div className="flex items-center gap-4">
-              <Link href="#" className="hover:underline">
-                Privacy
-              </Link>
-              <p>.</p>
-              <Link href="#" className="hover:underline">
-                Terms
-              </Link>
-              <p>.</p>
+        {/* Bottom Section */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 text-grey-0 font-medium text-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <p>©{year} PBR Life Sciences.</p>
+            <div className="flex items-center gap-3 sm:gap-4 text-sm">
+              <Link href="#" className="hover:underline transition">Privacy</Link>
+              <span className="text-grey-0/60">•</span>
+              <Link href="#" className="hover:underline transition">Terms</Link>
+              <span className="text-grey-0/60">•</span>
               <p>All rights reserved.</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-grey-0 font-medium uppercase divide-x">
-            <p className="pr-4">United Kingdom</p>
-            <p className="pr-4">Nigeria</p>
-            <p className="pr-4">Ghana</p>
+          {/* Countries */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs md:text-sm uppercase tracking-wider">
+            <p>United Kingdom</p>
+            <p>Nigeria</p>
+            <p>Ghana</p>
             <p>Kenya</p>
           </div>
         </div>
       </div>
 
+      {/* Optional subtle map background (uncomment if desired) */}
       {/* <Image
         src="/map.png"
-        width={400}
-        height={400}
-        alt="Map"
-        className="absolute top-0 z-1 object-cover opacity-20"
+        width={600}
+        height={600}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
       /> */}
     </footer>
   );

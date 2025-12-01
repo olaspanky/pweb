@@ -41,7 +41,7 @@ export default function SectionNavigation() {
   }, [activeSection]);
 
   return (
-    <nav className="bg-grey-0 py-6 sticky top-0 z-20 shadow-md">
+    <nav className="hidden lg:block bg-grey-0 py-6 sticky top-0 z-20 shadow-md">
       <ul
         ref={containerRef}
         className="relative max-w-[1440px] px-18 mx-auto flex items-center justify-between font-semibold text-lg text-brand-blue"

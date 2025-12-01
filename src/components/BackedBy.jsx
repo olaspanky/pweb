@@ -16,45 +16,49 @@ const logos = [
 export default function BackedBy() {
   return (
     <div>
-      {/* Header — 100% unchanged */}
+      {/* Header */}
       <div className="py-6 bg-gradient-to-r from-brand-dark-blue via-brand-blue/90 to-brand-light-blue/30">
-        <p className="text-grey-0 text-center text-2xl font-semibold">
+        <p className="text-grey-0 text-center text-xl md:text-2xl font-semibold">
           We are backed by
         </p>
       </div>
 
-      {/* Scrolling logos — same spacing as your original */}
+      {/* Scrolling Logos */}
       <div className="overflow-hidden">
         <div className="py-6 animate-marquee whitespace-nowrap">
-          <div className="inline-flex items-center gap-32 px-18">
-            {/* First set */}
+          <div className="inline-flex items-center gap-16 md:gap-32 px-6 md:px-18">
+
+            {/* First Loop */}
             {logos.map((logo, i) => (
-              <Image
-                key={i}
-                src={logo.src}
-                alt="Backed by"
-                width={150}
-                height={70}
-                className={`flex-shrink-0 w-[${logo.width}px]`}
-              />
+              <div key={i} className="flex-shrink-0">
+                <Image
+                  src={logo.src}
+                  alt="Backed by"
+                  width={logo.width}
+                  height={60}
+                  className="w-[60px] sm:w-[80px] md:w-auto object-contain"
+                />
+              </div>
             ))}
 
-            {/* Repeated set for seamless loop */}
+            {/* Duplicate Loop for infinite scroll */}
             {logos.map((logo, i) => (
-              <Image
-                key={i + logos.length}
-                src={logo.src}
-                alt="Backed by"
-                width={150}
-                height={70}
-                className={`flex-shrink-0 w-[${logo.width}px] ml-6`}
-              />
+              <div key={i + logos.length} className="flex-shrink-0 ml-6 md:ml-12">
+                <Image
+                  src={logo.src}
+                  alt="Backed by"
+                  width={logo.width}
+                  height={60}
+                  className="w-[60px] sm:w-[80px] md:w-auto object-contain"
+                />
+              </div>
             ))}
+
           </div>
         </div>
       </div>
 
-      {/* Pure CSS marquee — no pause, infinite */}
+      {/* Animation */}
       <style jsx>{`
         @keyframes marquee {
           0%   { transform: translateX(0); }
