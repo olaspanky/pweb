@@ -6,10 +6,9 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import HeroImage1 from "@/assets/images/hero-1.jpg";
-import HeroImage2 from "@/assets/images/hero-2.png";
+import HeroImage1 from "@/assets/images/cu.png";
 
-const heroImages = [HeroImage1, HeroImage2];
+const heroImages = [HeroImage1];
 
 export default function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
