@@ -6,7 +6,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import HeroImage1 from "@/assets/images/hero-1.jpg";
+import HeroImage1 from "@/assets/images/her2.png";
 import HeroImage2 from "@/assets/images/hero-2.png";
 
 const heroImages = [HeroImage1, HeroImage2];
@@ -51,7 +51,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content - Now truly centered */}
-      <div className="relative z-20 h-full flex items-center pt-24">
+      <div className="relative z-20 h-full flex items-center pt-24 lg:pt-48">
         <div className="max-w-[1440px] px-6 lg:px-18 mx-auto w-full flex flex-col gap-6 md:gap-8">
           <h1 className="text-grey-0 uppercase text-3xl sm:text-5xl lg:text-6xl w-full sm:w-[85%] md:w-[70%] font-medium leading-tight">
             Transforming{" "}
@@ -67,7 +67,7 @@ export default function HeroSection() {
           <Button content={{ to: "/", label: "Learn More" }} className="uppercase w-48" />
           
           {/* Slider Dots */}
-          <div className="flex items-center gap-4 mt-16">
+          <div className="flex items-center gap-4 mt-5">
             {heroImages.map((_, index) => (
               <button
                 key={index}
