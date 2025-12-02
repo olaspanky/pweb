@@ -1,14 +1,18 @@
 "use client";
 
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 import { useSectionObserver } from "@/contexts/SectionObserverContext";
+import { useEffect, useRef } from "react";
 
 export default function ObservedSection({ id, children }) {
-  
+  const ref = useRef(null);
+  const { registerSection } = useSectionObserver();
+
+  useEffect(() => {
+    if (ref.current) registerSection(id, ref.current);
+  }, [id]);
 
   return (
-    <section id={id} >
+    <section id={id} ref={ref} className="scroll-mt-[120px]">
       {children}
     </section>
   );

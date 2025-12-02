@@ -1,23 +1,47 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback } from "react";
+import { createContext, useContext, useRef, useState, useEffect } from "react";
 
-const SectionContext = createContext();
+const SectionObserverContext = createContext();
 
 export function SectionObserverProvider({ children }) {
   const [activeSection, setActiveSection] = useState(null);
+  const sectionsRef = useRef({});
 
-  const registerSection = useCallback((id, inView) => {
-    if (inView) setActiveSection(id);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            setActiveSection(id);
+          }
+        });
+      },
+      {
+        rootMargin: "-10% 0px -70% 0px",
+        threshold: 0.1,
+      }
+    );
+
+    Object.values(sectionsRef.current).forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
+  const registerSection = (id, el) => {
+    sectionsRef.current[id] = el;
+  };
+
   return (
-    <SectionContext.Provider value={{ activeSection, registerSection }}>
+    <SectionObserverContext.Provider
+      value={{ activeSection, registerSection }}
+    >
       {children}
-    </SectionContext.Provider>
+    </SectionObserverContext.Provider>
   );
 }
 
 export function useSectionObserver() {
-  return useContext(SectionContext);
+  return useContext(SectionObserverContext);
 }

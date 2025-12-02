@@ -16,29 +16,35 @@ export default function Page() {
   return (
     <div className="w-[100vw]">
       <SectionObserverProvider>
-        {/* Hero Section - no animation */}
         <HeroSection />
 
-        {/* Fixed navigation that highlights current section */}
         <SectionNavigation />
 
-        {/* Simple static section (still gets observed for navigation) */}
-        <BackedBy />
-
-        {/* All other sections - plain, fast, no fade/slide effects */}
+        {/* Correctly observed sections */}
+        <ObservedSection id="difference">
           <OurDifferenceSection />
+        </ObservedSection>
 
+        <ObservedSection id="solutions">
           <OurSolutions />
+        </ObservedSection>
 
+        <ObservedSection id="products">
           <ProductsSection />
+        </ObservedSection>
 
+        <ObservedSection id="insights">
           <InsightsSection />
+        </ObservedSection>
 
+        <ObservedSection id="expertise">
           <PartnersSection />
+        </ObservedSection>
 
+        <ObservedSection id="careers">
           <CareersSection />
+        </ObservedSection>
 
-        {/* Contact Card & Footer - also static */}
         <ContactCard />
         <Footer />
       </SectionObserverProvider>

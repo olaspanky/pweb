@@ -82,35 +82,3 @@ export default function SectionNavigation() {
     </nav>
   );
 }
-
-/*
-// MY CODE BEFORE ANIMATION
-
-import Link from "next/link";
-
-export default function SectionNavigation() {
-  return (
-    <nav className="bg-grey-0 py-6 sticky top-0 z-1 shadow-md">
-      <ul className="max-w-[1440px] px-18 mx-auto flex items-center justify-between font-semibold text-lg text-brand-blue">
-        <li>
-          <Link href="#difference">Our Difference</Link>
-        </li>
-        <li>
-          <Link href="#solutions">Explore Solutions</Link>
-        </li>
-        <li>
-          <Link href="#products">Products</Link>
-        </li>
-        <li>
-          <Link href="#expertise">Expertise</Link>
-        </li>
-        <li>
-          <Link href="#insights">Insights</Link>
-        </li>
-        <li>
-          <Link href="#careers">Careers</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-} */
