@@ -4,7 +4,8 @@ import Image from "next/image";
 import img from "./../../../public/images/ab22.png";
 
 export default function PartnersSection() {
-return ( <section className="max-w-[1440px] px-6 sm:px-12 md:px-16 mx-auto py-20"> <div className="flex flex-col lg:flex-row items-center gap-12">
+return ( 
+<section className="max-w-[1440px] px-6 sm:px-12 md:px-16 mx-auto py-20"> <div className="flex flex-col lg:flex-row items-center gap-12">
 {/* Text Content */} <div className="flex flex-col items-start gap-6 lg:w-1/2"> <H2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-grey-900">
 A Vision for Inclusive Innovation </H2>
       <p className="text-grey-700 text-base sm:text-lg md:text-xl text-justify font-medium">

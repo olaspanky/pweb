@@ -12,7 +12,7 @@ export default function ObservedSection({ id, children }) {
   }, [id]);
 
   return (
-    <section id={id} ref={ref} className="scroll-mt-[120px]">
+    <section id={id} ref={ref} className="scroll-mt-[120px] bg-[#eaeef4]">
       {children}
     </section>
   );

@@ -14,7 +14,8 @@ import ProductsSection from "@/ui/homepage/ProductsSection";
 
 export default function Page() {
   return (
-    <div className="w-[100vw]">
+    <div className="w-[100vw] ">
+      
       <SectionObserverProvider>
         <HeroSection />
 

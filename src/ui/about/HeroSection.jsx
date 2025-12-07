@@ -21,16 +21,16 @@ const slides = [
         <span className="text-brand-gold">Emerging Markets</span>
       </>
     ),
-    subtitle: "For healthcare organizations seeking to succeed in emerging markets, PBR Life Sciences is the intelligent data partner that transforms complex healthcare dynamics into actionable insights through AI-powered analytics and deep market understanding. Unlike traditional data providers, we combine multivariate real-world data with advanced technology to reveal unprecedented opportunities for growth and impact.",
+    subtitle: "For healthcare organizations seeking to succeed in emerging markets, PBR Life Sciences is the intelligent data partner that transforms complex healthcare dynamics into actionable insights through AI-powered analytics and deep market understanding.",
   },
   {
     image: HeroImage1,
     title: (
       <>
-       To Pioneer the Future of <span className="text-brand-green">Healthcare Intelligence </span> – Transforming Data into Global Impact Across <span className="text-brand-gold">Emerging Markets</span>
+       To Pioneer the Future of <span className="text-brand-green">Healthcare Intelligence </span> 
       </>
     ),
-    subtitle: "To be the world's foremost AI-powered healthcare intelligence company, pioneering data transformation across emerging markets." ,
+    subtitle: "Transforming Data into Global Impact Across Emerging Markets" ,
   },
   {
     image: HeroImage2,
@@ -49,24 +49,7 @@ const slides = [
        Our <span className="text-brand-green">Commitment</span>{" "} to  <span className="text-brand-gold">Excellence</span> and Integrity 
       </>
     ),
-    subtitle: (
-      <ul className="space-y-2 text-grey-0/90 leading-relaxed">
-        {[
-          "Innovation: Finding solutions to complex problems",
-          "Excellence: Delivering outstanding work that exceeds expectations",
-          "Customer-centricity: Creating what truly helps customers succeed",
-          "Integrity: Being truthful and transparent in all actions",
-          "Global perspective: Bringing world-class standards to every market",
-          "Respect for people culture and environment: Embracing diversity, honoring local traditions, and ensuring sustainable practices",
-        ].map((item, idx) => (
-          <li key={idx} className="flex items-start">
-            <span className="mr-2">•</span>
-            <span>{item.split(":")[0]}:</span>
-            <span className="font-light ml-1">{item.split(":").slice(1).join(":")}</span>
-          </li>
-        ))}
-      </ul>
-    )},
+subtitle: "Innovation, Excellence, Customer-centricity, Integrity, Global perspective, Respect for people culture and environment", },
   {
     image: HeroImage4,
     title: (
@@ -74,14 +57,14 @@ const slides = [
         Powering <span className="text-brand-green">Strategic Advantage</span> Through <span className="text-brand-gold">Intelligent Data</span> 
       </>
     ),
-    subtitle: "At PBR Life Sciences, we bridge the gap between data and decisive action. Our suite of proprietary platforms and expert consulting services transforms complex emerging market healthcare landscapes into clear, actionable strategies. Grounded in local realities and built on a global standard of excellence, we provide the clarity you need to win in dynamic markets.",
+    subtitle: "Grounded in local realities and built on a global standard of excellence, we provide the clarity you need to win in dynamic markets.",
   },
 ];
 
 export default function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+    [Autoplay({ delay: 15000, stopOnInteraction: false })]
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -177,7 +160,7 @@ export default function HeroSection() {
           animation: fade-in 0.8s ease-out forwards;
         }
         .delay-150 {
-          animation-delay: 0.15s;
+          animation-delay: 15s;
         }
         @keyframes progress {
           from {
@@ -189,7 +172,7 @@ export default function HeroSection() {
         }
         .animate-progress {
           transform-origin: left;
-          animation: progress 5s linear forwards;
+          animation: progress 15s linear forwards;
         }
       `}</style>
     </header>

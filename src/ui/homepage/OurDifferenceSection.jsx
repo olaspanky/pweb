@@ -3,7 +3,10 @@ import image from "@/assets/images/ab21.png";
 import H2 from "@/components/Typography";
 
 export default function OurDifferenceSection() {
-return ( <section id="difference" className="py-16 sm:py-20 bg-grey-50"> <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-[1440px] px-6 sm:px-12 md:px-16 mx-auto">
+return ( <section id="difference" className="py-16 sm:py-20 "> 
+<div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-[1440px] px-6 sm:px-12 md:px-16 mx-auto">
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark-blue via-brand-blue/70 to-brand-light-blue/10" />
+
 {/* Image */} <figure className="rounded-xl overflow-hidden relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[500px]"> 
 <Image
          src={image}
@@ -12,7 +15,6 @@ return ( <section id="difference" className="py-16 sm:py-20 bg-grey-50"> <div cl
          className="object-cover object-top"
        /> </figure>
 
-```
     {/* Text Content */}
     <div className="relative w-full lg:w-1/2 flex flex-col items-start gap-4 lg:gap-6">
       {/* Optional overlay for readability */}
