@@ -29,6 +29,7 @@ export default function Navigation({ className }) {
       href: "/about",
       label: "About",
     },
+    { href: "/consult", label: "Consulting" },
     { href: "/partnerships", label: "Partnerships" },
     { href: "/careers", label: "Careers" },
 

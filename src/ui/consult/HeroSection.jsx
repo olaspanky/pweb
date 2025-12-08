@@ -66,10 +66,17 @@ Helping pharma and life sciences leaders decide where to play, how to win, and h
   We combine proprietary real-world data, purpose-built platforms, and proven on-the-ground execution to turn complex emerging markets into predictable growth engines.
 </p>
 
-<div className="flex gap-5">
- <Button content={{ to: "/", label: "Get in Touch" }} className="uppercase w-48" />
-          <Button content={{ to: "/", label: "Download Report" }} className="uppercase w-48" />
-</div>
+ <div className="flex flex-wrap gap-5 items-center  " >
+      {/* Solid Blue Button */}
+      <button className="px-8 py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-colors duration-200 shadow-sm">
+        GET IN TOUCH
+      </button>
+
+      {/* Outlined Blue Button */}
+      <button className="px-8 py-3 border border-[#0794D4] text-white font-semibold rounded-lg hover:bg-sky-600 transition-colors duration-200 shadow-sm">
+        DOWNLOAD REPORTS
+      </button>
+    </div>
          
                 
         </div>
