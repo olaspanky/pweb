@@ -6,7 +6,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import HeroImage1 from "@/assets/images/sn1.png";
+import HeroImage1 from "@/assets/images/sns.png";
 
 const heroImages = [HeroImage1];
 
@@ -53,14 +53,14 @@ export default function HeroSection() {
       <div className="relative z-20 h-full flex items-center">
         <div className="max-w-[1440px] px-6 lg:px-18 mx-auto w-full flex flex-col gap-6 md:gap-3">
           <h1 className="text-grey-0 uppercase text-3xl sm:text-5xl lg:text-6xl w-full sm:w-[85%] md:w-[70%] font-medium leading-tight">
-                        SONUS<sup className="text-xl sm:text-2xl">TM</sup>
+                        INVISIO<sup className="text-xl sm:text-2xl">TM</sup>
 
           </h1>
 
           <p className="text-base sm:text-lg md:text-2xl text-grey-0 max-w-2xl">
-The Voice of Emerging Market Healthcare         </p>
+The Prescriber’s Journey Revealed          </p>
           <p className="text-base sm:text-lg md:text-lg text-grey-0 max-w-2xl">
-Listen to the market and engage with purpose.         </p>
+Connect diagnosis to treatment with unparalleled clarity.          </p>
 
           <Button content={{ to: "/", label: "Request A Demo" }} className="uppercase w-48" />
         </div>

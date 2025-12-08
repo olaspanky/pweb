@@ -1,6 +1,6 @@
 import Image from "next/image";
-import image from "@/assets/images/sn2.png";
-import image2 from "@/assets/images/sn3.png";
+import image from "@/assets/images/inv1.png";
+import image2 from "@/assets/images/inv2.png";
 import H2 from "@/components/Typography";
 
 export default function OurDifferenceSection() {
@@ -26,7 +26,8 @@ return (
       </H2>
 
       <p className="text-grey-700 text-base sm:text-lg md:text-xl text-justify font-medium">
-SONUS™ is our unique, integrated engagement and insight platform built for the nuances of emerging market healthcare and consumer markets. It seamlessly combines ethically-sourced e-consent surveys, targeted promotions, and sell-out data in a single, streamlined environment to capture the voice of the prescriber and consumer.</p>  </div>
+INVISIO™ is a powerful analytics platform that illuminates the critical link between clinical diagnosis and prescribing behavior. By integrating anonymized patient diagnosis data with prescription records, we reveal how diseases are truly treated across different medical specialties, brands, and patient types.  
+</p>  </div>
   </div>
 </section>
 <section id="difference" className="py-16 sm:py-20 "> 
@@ -43,7 +44,7 @@ SONUS™ is our unique, integrated engagement and insight platform built for the
 Designed for      </H2>
 
       <p className="text-grey-700 text-base sm:text-lg md:text-xl text-justify font-medium">
-SONUS™ is our unique, integrated engagement and insight platform built for the nuances of emerging market healthcare and consumer markets. It seamlessly combines ethically-sourced e-consent surveys, targeted promotions, and sell-out data in a single, streamlined environment to capture the voice of the prescriber and consumer.</p>
+Prescription-driven pharmaceutical brands, medical affairs professionals, market access teams, and strategists who need to understand the "why" behind the prescription.</p>
 </div>
     {/* Image */} <figure className="rounded-xl overflow-hidden relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-[500px]"> 
 <Image

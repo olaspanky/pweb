@@ -21,6 +21,8 @@ export default function Page() {
 
         <SectionNavigation />
 
+        <BackedBy />
+
         {/* Correctly observed sections */}
         <ObservedSection id="difference">
           <OurDifferenceSection />

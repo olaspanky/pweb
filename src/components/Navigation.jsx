@@ -14,24 +14,25 @@ export default function Navigation({ className }) {
 
   const navLinks = [
     { href: "/solutions", label: "Solutions" },
-    
-    { 
-       href: "#", 
+
+    {
+      href: "#",
       label: "Product",
       sublinks: [
         { href: "/versus", label: "Versus" },
-        { href: "/sonus", label: "Sonus" }
-      ]
+        { href: "/invisio", label: "Invisio" },
+        { href: "/sonus", label: "Sonus" },
+      ],
+    },
+    { href: "/insights", label: "Insights" },
+    {
+      href: "/about",
+      label: "About",
     },
     { href: "/partnerships", label: "Partnerships" },
     { href: "/careers", label: "Careers" },
-    { href: "/insights", label: "Insights" },
-    { 
-            href: "/about", label: "About" },
 
     ,
-    { href: "/partnerships", label: "Partnerships" },
-    { href: "/careers", label: "Careers" },
   ];
 
   const isActive = (href) => {
@@ -54,10 +55,18 @@ export default function Navigation({ className }) {
           </Link>
 
           <div className="flex items-center gap-4">
-            <a href="#"><Facebook /></a>
-            <a href="#"><Linkedin /></a>
-            <a href="#"><Instagram /></a>
-            <a href="#"><Twitter /></a>
+            <a href="#">
+              <Facebook />
+            </a>
+            <a href="#">
+              <Linkedin />
+            </a>
+            <a href="#">
+              <Instagram />
+            </a>
+            <a href="#">
+              <Twitter />
+            </a>
           </div>
         </div>
       </nav>
@@ -78,8 +87,8 @@ export default function Navigation({ className }) {
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8 uppercase font-semibold text-xs">
           {navLinks.map((link) => (
-            <li 
-              key={link.href} 
+            <li
+              key={link.href}
               className="relative"
               onMouseEnter={() => link.sublinks && setAboutOpen(true)}
               onMouseLeave={() => link.sublinks && setAboutOpen(false)}
@@ -94,16 +103,18 @@ export default function Navigation({ className }) {
               >
                 {link.label}
               </Link>
-              
+
               {/* Dropdown for sublinks */}
               {link.sublinks && aboutOpen && (
-                <ul className="absolute top-full left-0 pt-2 bg-white shadow-lg rounded-md py-2 min-w-[160px]">
+                <ul className="absolute top-full  left-0 pt-2 bg-white shadow-lg rounded-md py-2 min-w-[160px]">
                   {link.sublinks.map((sublink) => (
                     <li key={sublink.href}>
                       <Link
                         href={sublink.href}
                         className={`block px-4 py-2 text-xs font-semibold transition-colors hover:bg-blue-50 hover:text-blue-600 ${
-                          isActive(sublink.href) ? "text-blue-600" : "text-grey-900"
+                          isActive(sublink.href)
+                            ? "text-blue-600"
+                            : "text-grey-900"
                         }`}
                       >
                         {sublink.label}
@@ -147,7 +158,7 @@ export default function Navigation({ className }) {
                 >
                   {link.label}
                 </Link>
-                
+
                 {/* Mobile sublinks */}
                 {link.sublinks && (
                   <ul className="mt-2 flex flex-col gap-2">
@@ -156,7 +167,9 @@ export default function Navigation({ className }) {
                         <Link
                           href={sublink.href}
                           className={`block py-1 text-sm ${
-                            isActive(sublink.href) ? "text-blue-400" : "text-grey-300"
+                            isActive(sublink.href)
+                              ? "text-blue-400"
+                              : "text-grey-300"
                           }`}
                           onClick={() => setOpen(false)}
                         >

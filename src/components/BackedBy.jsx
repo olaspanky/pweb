@@ -24,39 +24,39 @@ export default function BackedBy() {
       </div>
 
       {/* Scrolling Logos */}
-      <div className="overflow-hidden">
-        <div className="py-6 animate-marquee whitespace-nowrap">
-          <div className="inline-flex items-center gap-16 md:gap-32 px-6 md:px-18">
-
-            {/* First Loop */}
-            {logos.map((logo, i) => (
-              <div key={i} className="flex-shrink-0">
-                <Image
-                  src={logo.src}
-                  alt="Backed by"
-                  width={logo.width}
-                  height={60}
-                  className="w-[60px] sm:w-[80px] md:w-auto object-contain"
-                />
-              </div>
-            ))}
-
-            {/* Duplicate Loop for infinite scroll */}
-            {logos.map((logo, i) => (
-              <div key={i + logos.length} className="flex-shrink-0 ml-6 md:ml-12">
-                <Image
-                  src={logo.src}
-                  alt="Backed by"
-                  width={logo.width}
-                  height={60}
-                  className="w-[60px] sm:w-[80px] md:w-auto object-contain"
-                />
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </div>
+         <div className="overflow-hidden">
+             <div className="py-6 animate-marquee whitespace-nowrap">
+               <div className="inline-flex items-center gap-16 md:gap-32 px-6 md:px-18">
+     
+                 {/* First Loop */}
+                 {logos.map((logo, i) => (
+                   <div key={i} className="flex-shrink-0">
+                     <Image
+                       src={logo.src}
+                       alt="Backed by"
+                       width={logo.width}
+                       height={30}
+                       className="w-[32px] sm:w-[48px] md:w-auto object-contain"
+                     />
+                   </div>
+                 ))}
+     
+                 {/* Duplicate Loop for infinite scroll */}
+                 {logos.map((logo, i) => (
+                   <div key={i + logos.length} className="flex-shrink-0 ml-6 md:ml-12">
+                     <Image
+                       src={logo.src}
+                       alt="Backed by"
+                       width={logo.width}
+                       height={30}
+                       className="w-[32px] sm:w-[48px] md:w-auto object-contain"
+                     />
+                   </div>
+                 ))}
+     
+               </div>
+             </div>
+           </div>
 
       {/* Animation */}
       <style jsx>{`

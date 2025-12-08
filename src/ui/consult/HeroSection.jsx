@@ -6,7 +6,8 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import HeroImage1 from "@/assets/images/sn1.png";
+import HeroImage1 from "@/assets/images/consult.png";
+import HeroImage2 from "@/assets/images/hero-2.png";
 
 const heroImages = [HeroImage1];
 
@@ -50,19 +51,27 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content - Now truly centered */}
-      <div className="relative z-20 h-full flex items-center">
-        <div className="max-w-[1440px] px-6 lg:px-18 mx-auto w-full flex flex-col gap-6 md:gap-3">
-          <h1 className="text-grey-0 uppercase text-3xl sm:text-5xl lg:text-6xl w-full sm:w-[85%] md:w-[70%] font-medium leading-tight">
-                        SONUS<sup className="text-xl sm:text-2xl">TM</sup>
-
+      <div className="relative z-20 h-full flex items-center pt-24 lg:pt-48">
+        <div className="max-w-[1440px] px-6 lg:px-18 mx-auto w-full flex flex-col gap-6 md:gap-8">
+          <h1 className="text-grey-0 uppercase text-3xl sm:text-5xl lg:text-6xl w-full sm:w-[85%] md:w-[98%] font-medium leading-tight">
+            Data-Powered Go-to-Market & {" "}
+            <span className="text-brand-green">Commercial Excellence</span> for{" "}
+            <span className="text-brand-gold">Emerging Markets</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-2xl text-grey-0 max-w-2xl">
-The Voice of Emerging Market Healthcare         </p>
-          <p className="text-base sm:text-lg md:text-lg text-grey-0 max-w-2xl">
-Listen to the market and engage with purpose.         </p>
+          <p className="text-base sm:text-lg md:text-2xl font-extrabold  text-grey-0 max-w-7xl">
+Helping pharma and life sciences leaders decide where to play, how to win, and how to scale in emerging markets          </p>
 
-          <Button content={{ to: "/", label: "Request A Demo" }} className="uppercase w-48" />
+          <p className="text-base sm:text-lg md:text-md text-grey-0 max-w-7xl">
+  We combine proprietary real-world data, purpose-built platforms, and proven on-the-ground execution to turn complex emerging markets into predictable growth engines.
+</p>
+
+<div className="flex gap-5">
+ <Button content={{ to: "/", label: "Get in Touch" }} className="uppercase w-48" />
+          <Button content={{ to: "/", label: "Download Report" }} className="uppercase w-48" />
+</div>
+         
+                
         </div>
       </div>
     </header>

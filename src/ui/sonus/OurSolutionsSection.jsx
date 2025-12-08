@@ -1,47 +1,39 @@
-import React from "react";
-import { FileText, GitBranch, ClipboardCheck, LayoutGrid, RefreshCw } from "lucide-react";
+import React from 'react';
+import { FileText, Stethoscope, TrendingUp, BookOpen, Grid3x3 } from 'lucide-react';
 
-const PrescriberInsightsGrid = () => {
+
+
+export default function PrescriberInsights() {
   const features = [
     {
       icon: FileText,
-      title: "Decipher Prescriber Motivations",
-      description:
-        "Identify the specific patient diagnoses that lead to prescriptions for your brand versus competitors.",
-      color: "bg-green-100",
-      iconColor: "text-green-600"
+      title: 'Uncover Deep Prescriber Insights',
+      description: 'Understand the underlying reasons from clinical differentiators to brand perception that drive brand choice.',
+      color: 'bg-green-50'
     },
     {
-      icon: GitBranch,
-      title: "Map Treatment Pathways",
-      description:
-        "Understand physician behavior and treatment preferences across specialties and regions.",
-      color: "bg-green-100",
-      iconColor: "text-green-600"
+      icon: Stethoscope,
+      title: 'Identify Unmet Needs',
+      description: 'Discover gaps and opportunities within a therapy area directly from those who treat it.',
+      color: 'bg-green-50'
     },
     {
-      icon: ClipboardCheck,
-      title: "Generate Real-World Evidence",
-      description:
-        "Build a robust case to guide brand strategy, launch planning, and scientific engagement with healthcare professionals.",
-      color: "bg-green-100",
-      iconColor: "text-green-600"
+      icon: TrendingUp,
+      title: 'Track Evolving Perceptions',
+      description: 'Monitor shifts in prescriber behavior and sentiment with platform updates twice a year.',
+      color: 'bg-green-50'
     },
     {
-      icon: LayoutGrid,
-      title: "Evaluate Engagement ROI",
-      description:
-        "Measure how effectively medical and marketing activities translate into changed prescribing patterns.",
-      color: "bg-blue-100",
-      iconColor: "text-blue-600"
+      icon: BookOpen,
+      title: 'Optimize Resource Deployment',
+      description: 'Assess the effectiveness of marketing materials and sales force strategy with direct feedback.',
+      color: 'bg-blue-50'
     },
     {
-      icon: RefreshCw,
-      title: "Forecast Patient Flow",
-      description:
-        "Model future brand demand based on actual diagnosis rates and treatment initiation patterns.",
-      color: "bg-blue-100",
-      iconColor: "text-blue-600"
+      icon: Grid3x3,
+      title: 'Refine Engagement Strategy',
+      description: 'Guide messaging, targeting, and segmentation with qualitative insights straight from the field.',
+      color: 'bg-blue-50'
     }
   ];
 
@@ -82,4 +74,3 @@ const PrescriberInsightsGrid = () => {
   );
 };
 
-export default PrescriberInsightsGrid;
