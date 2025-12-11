@@ -9,7 +9,7 @@ export default function InsightsSection() {
   return (
     <section
       id="insights"
-      className="max-w-[1440px] px-6 md:px-12 lg:px-18 mx-auto py-16 md:py-20 flex flex-col items-center gap-12"
+      className="max-w-[1440px] px-6 md:px-12 lg:px-18 mx-auto flex flex-col items-center gap-12"
     >
       {/* Heading */}
       <div className="flex flex-col gap-3 items-center text-center">
@@ -70,7 +70,7 @@ export default function InsightsSection() {
 
       {/* CTA Button */}
       <Button
-        content={{ label: "Learn More", to: "#" }}
+        content={{ label: "Learn More", to: "/contact" }}
         className="uppercase mt-4"
       />
     </section>

@@ -70,7 +70,7 @@ export default function InsightsSection() {
 
       {/* CTA Button */}
       <Button
-        content={{ label: "Learn More", to: "#" }}
+        content={{ label: "Learn More", to: "/contact" }}
         className="uppercase mt-4"
       />
     </section>

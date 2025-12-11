@@ -17,7 +17,7 @@ export default function PartnersSection() {
         </p>
 
         <Button
-          content={{ label: "Learn More", to: "#" }}
+          content={{ label: "Learn More", to: "/partner" }}
           className="uppercase mt-2"
         />
       </div>

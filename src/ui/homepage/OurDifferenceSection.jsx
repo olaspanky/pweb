@@ -68,10 +68,7 @@ export default function OurDifferenceSection() {
               market and beyond.
             </p>
 
-            <Button
-              content={{ label: "Learn More", to: "#" }}
-              className="uppercase"
-            />
+           
           </div>
         </div>
       </div>

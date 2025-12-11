@@ -35,7 +35,7 @@ Sub-Saharan Africa's dynamic pharmaceutical landscape. </p> </div>
 
   {/* CTA Button */}
   <Button
-    content={{ label: "Learn More", to: "#" }}
+    content={{ label: "Learn More", to: "/contact" }}
     className="uppercase mt-8"
   />
 </section>

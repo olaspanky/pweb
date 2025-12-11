@@ -104,7 +104,7 @@ const slides = [
     title: (
       <>
        Advancing <span className="text-brand-green">Healthcare </span> through{" "}
-            <span className="text-brand-blue">intelligence</span> 
+            <span className="text-[#D3A352]">intelligence</span> 
       </>
     ),
     subtitle: "Transforming Data into Global Impact Across Emerging Markets" ,

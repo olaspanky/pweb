@@ -55,16 +55,16 @@ export default function Navigation({ className }) {
           </Link>
 
           <div className="flex items-center gap-4">
-            <a href="#">
+            <a href="https://www.facebook.com/PBR-Life-Sciences-61554007611436">
               <Facebook />
             </a>
-            <a href="#">
+            <a href="https://ng.linkedin.com/company/pbr-life-sciences">
               <Linkedin />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/pbrlifesciences/?hl=en">
               <Instagram />
             </a>
-            <a href="#">
+            <a href="https://x.com/pbrlifesciences">
               <Twitter />
             </a>
           </div>

@@ -46,16 +46,16 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-6">
-              <a href="#" aria-label="Facebook" className="hover:opacity-70 transition">
+              <a href="https://www.facebook.com/PBR-Life-Sciences-61554007611436" aria-label="Facebook" className="hover:opacity-70 transition">
                 <Facebook />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:opacity-70 transition">
+              <a href="https://ng.linkedin.com/company/pbr-life-sciences" aria-label="LinkedIn" className="hover:opacity-70 transition">
                 <Linkedin />
               </a>
-              <a href="#" aria-label="Instagram" className="hover:opacity-70 transition">
+              <a href="https://www.instagram.com/pbrlifesciences/?hl=en" aria-label="Instagram" className="hover:opacity-70 transition">
                 <Instagram />
               </a>
-              <a href="#" aria-label="Twitter" className="hover:opacity-70 transition">
+              <a href="https://x.com/pbrlifesciences" aria-label="Twitter" className="hover:opacity-70 transition">
                 <Twitter />
               </a>
             </div>

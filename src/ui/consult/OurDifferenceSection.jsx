@@ -8,6 +8,9 @@ import g2 from "../../../public/images/g2.png"
 import g3 from "../../../public/images/g3.png"
 import g4 from "../../../public/images/g4.png"
 import Cards from "../../components/Cards"
+import Button from "@/components/Button";
+
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -96,7 +99,7 @@ export default function LandingPage() {
             {/* Solutions Grid */}
             <div className="grid md:grid-cols-3 gap-8">
               {/* Solution 1 */}
-              <div className=" p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className=" p-8  shadow-sm hover:shadow-md transition-shadow border border-white/20 rounded-2xl ">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-white"
@@ -124,7 +127,7 @@ export default function LandingPage() {
               </div>
 
               {/* Solution 2 */}
-              <div className=" p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className=" p-8  shadow-sm hover:shadow-md transition-shadow border border-white/20 rounded-2xl">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-white"
@@ -152,7 +155,7 @@ export default function LandingPage() {
               </div>
 
               {/* Solution 3 */}
-              <div className=" p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className=" p-8 shadow-sm hover:shadow-md transition-shadow border border-white/20 rounded-2xl">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
                   <svg
                     className="w-6 h-6 text-white"
@@ -295,9 +298,9 @@ export default function LandingPage() {
                 </div>
               </div>
 
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-                LEARN MORE
-              </button>
+                <div className="hidden md:block">
+                        <Button content={{ label: "LEARN MORE", to: "/contact" }} />
+                      </div>
             </div>
 
             {/* Right: Image */}

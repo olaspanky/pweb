@@ -54,7 +54,7 @@ const DecisionMakingGrid = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-white">
+    <section className="py-3 sm:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
         {/* Header */}
         <div className="text-center mb-16">

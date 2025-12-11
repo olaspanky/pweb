@@ -32,7 +32,7 @@ export default function ContactCard() {
 
       {/* Button */}
       <Button
-        content={{ label: "Contact Us", to: "#" }}
+        content={{ label: "Contact Us", to: "/contact" }}
         className="border border-grey-0 bg-transparent mt-4"
       />
     </section>
