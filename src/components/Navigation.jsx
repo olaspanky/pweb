@@ -29,7 +29,7 @@ export default function Navigation({ className }) {
       href: "/about",
       label: "About",
     },
-    { href: "/partnerships", label: "Partner" },
+    { href: "/partner", label: "Partnerships" },
     { href: "/careers", label: "Careers" },
 
     ,
