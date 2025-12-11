@@ -26,7 +26,7 @@ export default function CareersSection() {
 
       {/* Text */}
       <div className="flex flex-col items-start gap-6">
-        <p className="font-bold text-xl md:text-xl text-grey-900">Careers</p>
+        <p className="font-medium text-lg md:text-xl text-grey-900">Careers</p>
 
         <H2>Deliver industry-shaping value with us</H2>
 

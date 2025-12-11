@@ -37,7 +37,7 @@ export default function ProductsSection() {
       } else {
         container.scrollBy({ left: cardWidth, behavior: "smooth" });
       }
-    }, 5000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -178,7 +178,7 @@ export default function ProductsSection() {
         </div>
 
         {/* --- CARD 4 --- */}
-        {/* <div className="bg-brand-gold px-8 md:px-10 py-10 relative snap-start rounded-xl min-h-[350px]">
+        <div className="bg-brand-gold px-8 md:px-10 py-10 relative snap-start rounded-xl min-h-[350px]">
           <h3 className="text-2xl md:text-3xl font-medium text-grey-0 mb-8 md:mb-10">
             Consulting & Market Insights
           </h3>
@@ -203,10 +203,10 @@ export default function ProductsSection() {
             alt="Mesh"
             className="absolute top-0 right-0 rotate-90 opacity-70"
           />
-        </div> */}
+        </div>
 
         {/* --- CARD 5 --- */}
-        {/* <div className="bg-brand-gold px-8 md:px-10 py-10 relative snap-start rounded-xl min-h-[350px]">
+        <div className="bg-brand-gold px-8 md:px-10 py-10 relative snap-start rounded-xl min-h-[350px]">
           <h3 className="text-2xl md:text-3xl font-medium text-grey-0 mb-8 md:mb-10">
             Consulting & Market Insights
           </h3>
@@ -231,7 +231,7 @@ export default function ProductsSection() {
             alt="Mesh"
             className="absolute top-0 right-0 rotate-90 opacity-70"
           />
-        </div> */}
+        </div>
       </div>
     </section>
   );

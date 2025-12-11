@@ -12,7 +12,6 @@ return ( <section id="difference" className="py-16 sm:py-20 bg-grey-50"> <div cl
          className="object-cover object-top"
        /> </figure>
 
-```
     {/* Text Content */}
     <div className="relative w-full lg:w-1/2 flex flex-col items-start gap-4 lg:gap-6">
       {/* Optional overlay for readability */}

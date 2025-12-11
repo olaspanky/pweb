@@ -48,8 +48,6 @@ backgroundRepeat: "no-repeat",
 {/* Header */} <div className="text-center mb-16"> <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
 Our Differentiating Edge: Connected Intelligence for Emerging Markets </h2> <p className="text-lg sm:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
 What sets PBR Life Sciences apart is our unique blend of localized expertise, cutting-edge technology, and vast proprietary data assets. We don't just provide data; we connect it with advanced AI to accelerate decision-making from market entry strategies to product forecasting, delivering results in minutes, not months. </p> </div>
-
-```
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (

@@ -15,7 +15,6 @@ return (
          className="object-cover object-top"
        /> </figure>
 
-```
     {/* Text Content */}
     <div className="relative w-full lg:w-1/2 flex flex-col items-start gap-4 lg:gap-6">
       {/* Optional overlay for readability */}

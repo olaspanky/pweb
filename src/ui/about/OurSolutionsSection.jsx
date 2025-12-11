@@ -34,7 +34,7 @@ description:
 },
 ];
 
-return ( <section className="relative py-24 sm:py-32">
+return ( <section className="relative ">
 {/* Background wrapper with inline style */}
 <div
 className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16 py-20 relative"
@@ -49,7 +49,6 @@ backgroundRepeat: "no-repeat",
 Our Differentiating Edge: Connected Intelligence for Emerging Markets </h2> <p className="text-lg sm:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
 What sets PBR Life Sciences apart is our unique blend of localized expertise, cutting-edge technology, and vast proprietary data assets. We don't just provide data; we connect it with advanced AI to accelerate decision-making from market entry strategies to product forecasting, delivering results in minutes, not months. </p> </div>
 
-```
       {/* Features Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (

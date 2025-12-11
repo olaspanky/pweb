@@ -3,6 +3,11 @@ import HeroImage1 from "@/assets/images/cl2.png";
 import HeroImage2 from "@/assets/images/cl1.png";
 import HeroImage4 from "../../assets/images/cl4.png";
 import stats from "../../assets/images/stats.png"
+import g1 from "../../../public/images/g1.png"
+import g2 from "../../../public/images/g2.png"
+import g3 from "../../../public/images/g3.png"
+import g4 from "../../../public/images/g4.png"
+import Cards from "../../components/Cards"
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -61,83 +66,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Why Choose PBR Section */}
-      <section className=" text-white py-16">
-        <div
-          className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16 py-20 relative"
-          style={{
-            backgroundImage: `url("/bg1.png")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2 className="text-3xl font-bold mb-12">
-            Why Emerging-Market Leaders Choose PBR
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left: Benefits */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold mb-3">
-                  Africa Real-World Data
-                </h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  Emerging-markets real-world data assets, including pharmacy
-                  sell-out, hospital, claims and programme data from markets
-                  across Asia, Africa, Latin America & Europe.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-3">
-                  Local Realities, Global Rigor
-                </h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  Proven in-market experience translating local realities like
-                  resource constraints, regulatory and registration
-                  requirements, and infrastructure constraints into practical
-                  GTM and engagement models that can scale across emerging
-                  markets.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-3">
-                  Strategy, Tech & Execution
-                </h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  Integrated consulting + technology + operations: strategy,
-                  platforms and call-centre/field execution in one stack.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold mb-3">Compliance by Design</h3>
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  Data governance, pharma/intelligence-aligned processes and
-                  traceable e-consent across channels, aligned with local and
-                  international standards.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Image */}
-            <div className=" w-full relative h-96 bg-gray-200 rounded-lg overflow-hidden z-20">
-              {/* Replace with your image */}
-              <Image
-                src={HeroImage1}
-                fill
-                className="object-cover object-center "
-                placeholder="blur"
-              />{" "}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Solutions Section */}
+          {/* Core Solutions Section */}
       <section
         className="py-16 
       "
@@ -151,9 +80,9 @@ export default function LandingPage() {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/80 z-30"></div>
 
-          <div className="relative z-10">
+          <div className="relative z-99">
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Our Core Solutions
@@ -254,6 +183,84 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Why Choose PBR Section */}
+      <section className=" text-white py-16">
+        <div
+          className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16 py-20 relative"
+          style={{
+            backgroundImage: `url("/bg1.png")`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h2 className="text-3xl font-bold mb-12">
+            Why Emerging-Market Leaders Choose PBR
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Benefits */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-bold mb-3">
+                  Africa Real-World Data
+                </h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Emerging-markets real-world data assets, including pharmacy
+                  sell-out, hospital, claims and programme data from markets
+                  across Asia, Africa, Latin America & Europe.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">
+                  Local Realities, Global Rigor
+                </h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Proven in-market experience translating local realities like
+                  resource constraints, regulatory and registration
+                  requirements, and infrastructure constraints into practical
+                  GTM and engagement models that can scale across emerging
+                  markets.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">
+                  Strategy, Tech & Execution
+                </h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Integrated consulting + technology + operations: strategy,
+                  platforms and call-centre/field execution in one stack.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold mb-3">Compliance by Design</h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  Data governance, pharma/intelligence-aligned processes and
+                  traceable e-consent across channels, aligned with local and
+                  international standards.
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className=" w-full relative h-96 bg-gray-200 rounded-lg overflow-hidden z-20">
+              {/* Replace with your image */}
+              <Image
+                src={HeroImage1}
+                fill
+                className="object-cover object-center "
+                placeholder="blur"
+              />{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+
       {/* How We Work Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -267,32 +274,24 @@ export default function LandingPage() {
               <div className="space-y-6 mb-8">
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">
-                    1. Start with Your Real Questions
+                    1. Start with Your Real Questions - <span className="font-normal"> We frame the work around the decisions your regional and
+                    country leadership actually need to make now.</span>
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    We frame the work around the decisions your regional and
-                    country leadership actually need to make now.
-                  </p>
+                
                 </div>
 
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">
-                    2. Co-Design a Practical Roadmap
+                    2. Co-Design a Practical Roadmap - <span className="font-normal"> Strategy, evidence, technology, and execution in one aligned plan.</span>
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Strategy, evidence, technology, and execution in one aligned
-                    plan.
-                  </p>
+                
                 </div>
 
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">
-                    3. Implement, Measure, Refine
+                    3. Implement, Measure, Refine - <span className="font-normal"> We stay in the market with you with dashboards, field teams, call centers – until results are locked in.</span>
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    We stay in the market with you with dashboards, field teams,
-                    call centers – until results are locked in.
-                  </p>
+                 
                 </div>
               </div>
 
@@ -321,17 +320,11 @@ export default function LandingPage() {
       {/* Stats Section */}
       <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row">
-           <div className=" w-full relative h-96  rounded-lg overflow-hidden z-20">
-                {/* Replace with your image */}
-                <Image
-                  src={stats}
-                  fill
-                  className="w-12 h-12  object-contain object-center "
-                  placeholder="blur"
-                />{" "}
+           <div className=" w-full relative  rounded-lg overflow-hidden z-20">
+               <Cards />
               </div>
           {/* Experience Section */}
-          <div className=" text-center flex flex-col justify-center items-center ">
+          <div className=" text-left flex flex-col justify-center items-center ">
         
             <h3 className="text-4xl font-bold text-blue-900 mb-4">
               100+ years put together experience

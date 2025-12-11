@@ -15,7 +15,6 @@ Navigating Africa's Healthcare Evolution </H2> <p className="text-grey-700 font-
 Gain from 200% revenue-backed insights across 10,958 SKUs and
 Sub-Saharan Africa's dynamic pharmaceutical landscape. </p> </div>
 
-```
   {/* Insights Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
     {[insights1, insights2, insights3].map((imgSrc, idx) => (
