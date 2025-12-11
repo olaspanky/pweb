@@ -13,7 +13,7 @@ export default function Navigation({ className }) {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   const navLinks = [
-    { href: "/consult", label: "Consulting" },
+    { href: "/solutions", label: "Solutions" },
 
     {
       href: "#",

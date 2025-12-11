@@ -16,7 +16,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative">
-        <div className="flex  flex-col lg:flex-row gap-8 items-center max-w-7xl mx-auto px-6 py-16">
+        <div className="flex  flex-col lg:flex-row gap-8 items-center max-w-7xl mx-auto px-6 py-9">
           {/* Left: Image */}
           <div className=" lg:w-7/12 w-full relative h-96 bg-gray-200 rounded-lg overflow-hidden z-20">
             {/* Replace with your image */}
@@ -71,7 +71,7 @@ export default function LandingPage() {
 
           {/* Core Solutions Section */}
       <section
-        className="py-16 
+        className="py-5 
       "
       >
         <div
@@ -187,7 +187,7 @@ export default function LandingPage() {
       </section>
 
       {/* Why Choose PBR Section */}
-      <section className=" text-white py-16">
+      <section className=" text-white py-5">
         <div
           className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16 py-20 relative"
           style={{

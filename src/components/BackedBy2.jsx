@@ -25,9 +25,9 @@ export default function BackedBy() {
       </div>
 
       {/* Scrolling Logos */}
-      <div className="overflow-hidden">
-        <div className="py-6 animate-marquee whitespace-nowrap">
-          <div className="inline-flex items-center gap-16 md:gap-32 px-6 md:px-18">
+      <div className="overflow-hidden bg-white">
+        <div className="py-6 animate-marquee whitespace-nowrap bg-white">
+          <div className="inline-flex items-center gap-16 md:gap-32 px-6 md:px-18 bg-white">
 
             {/* First Loop */}
             {logos.map((logo, i) => (
