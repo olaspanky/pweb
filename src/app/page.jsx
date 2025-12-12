@@ -36,13 +36,15 @@ export default function Page() {
           <ProductsSection />
         </ObservedSection>
 
+         <ObservedSection id="expertise">
+          <PartnersSection />
+        </ObservedSection>
+
         <ObservedSection id="insights">
           <InsightsSection />
         </ObservedSection>
 
-        <ObservedSection id="expertise">
-          <PartnersSection />
-        </ObservedSection>
+       
 
         <ObservedSection id="careers">
           <CareersSection />

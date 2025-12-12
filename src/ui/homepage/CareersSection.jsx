@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import H2 from "@/components/Typography";
 import Image from "next/image";
-import image1 from "@/assets/images/careers.jpg";
+import image1 from "@/assets/images/del.png";
 
 export default function CareersSection() {
   return (

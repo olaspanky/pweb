@@ -75,8 +75,7 @@ export default function OurSolutions() {
         <div className="flex flex-col gap-3 text-center md:text-left">
           <H2>Our Solutions</H2>
           <p className="text-grey-700 font-medium">
-            Lorem Ipsum has been the industry's standard dummy text ever since
-          </p>
+PBR Life Sciences delivers evidence-based insights that help pharmaceutical companies make smarter decisions in emerging markets. By combining proprietary data platforms with deep local expertise, we translate complex market signals into clear answers what to launch, where to launch, and how to win.          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">

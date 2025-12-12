@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image from "@/assets/images/ab21.png";
+import image from "@/assets/images/pan.png";
 import H2 from "@/components/Typography";
 
 export default function OurDifferenceSection() {

@@ -122,7 +122,7 @@ export default function ProductsSection() {
               </span>
             </p>
 
-            <Link href="#" className="text-grey-0 underline font-medium">
+            <Link href="/versus" className="text-grey-0 underline font-medium">
               Discover Strategic Solutions
             </Link>
           </div>
@@ -150,7 +150,7 @@ export default function ProductsSection() {
             </p>
 
             <Link
-              href="#"
+              href="https://researchdatalab.pbrinsight.com/"
               className="text-brand-light-blue underline font-medium"
             >
               Discover Strategic Solutions
@@ -206,7 +206,7 @@ export default function ProductsSection() {
             </p>
 
             <Link
-              href="#"
+              href="/solutions"
               className="text-brand-light-blue underline font-medium"
             >
               Discover Strategic Solutions

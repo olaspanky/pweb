@@ -41,7 +41,7 @@ export default function PrescriberInsights() {
     <section className="py-3 sm:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16">
+          <div className="text-left lg:text-center mb-16 mt-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">
             How it Drives Decision-Making:
           </h2>

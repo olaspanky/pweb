@@ -33,8 +33,7 @@ export default function InsightsSection() {
           />
           <div className="bg-gradient-to-t from-grey-900 via-grey-900/20 to-transparent h-full w-full absolute bottom-0"></div>
           <figcaption className="absolute bottom-0 z-10 m-6 md:m-8 text-grey-0 font-semibold text-base md:text-lg">
-            Lorem Ipsum has been the industry's standard dummy text
-          </figcaption>
+Webinar Series, Driving Commercial Excellence in West African Pharma          </figcaption>
         </figure>
 
         {/* Card 2 */}
@@ -48,7 +47,7 @@ export default function InsightsSection() {
           />
           <div className="bg-gradient-to-t from-grey-900 via-grey-900/20 to-transparent h-full w-full absolute bottom-0"></div>
           <figcaption className="absolute bottom-0 z-10 m-6 md:m-8 text-grey-0 font-semibold text-base md:text-lg">
-            Lorem Ipsum has been the industry's standard dummy text
+            PBR was represented at the Google for startups
           </figcaption>
         </figure>
 
@@ -63,7 +62,7 @@ export default function InsightsSection() {
           />
           <div className="bg-gradient-to-t from-grey-900 via-grey-900/20 to-transparent h-full w-full absolute bottom-0"></div>
           <figcaption className="absolute bottom-0 z-10 m-6 md:m-8 text-grey-0 font-semibold text-base md:text-lg">
-            Lorem Ipsum has been the industry's standard dummy text
+            Versus Launch Event
           </figcaption>
         </figure>
       </div>
