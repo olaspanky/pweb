@@ -78,7 +78,7 @@ export default function NotFoundPage() {
             Under Construction
           </h2>
           <p className="text-xl md:text-2xl text-purple-200 max-w-2xl mx-auto">
-            We're working hard to bring you something amazing. 
+            We are working hard to bring you something amazing. 
             This page is currently being built. Check back soon!
           </p>
         </div>
