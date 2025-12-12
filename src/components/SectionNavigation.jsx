@@ -10,7 +10,7 @@ export default function SectionNavigation() {
     { id: "solutions", label: "Explore Solutions" },
     { id: "products", label: "Products" },
     { id: "expertise", label: "Expertise" },
-    { id: "insights", label: "Insights" },
+    // { id: "insights", label: "Insights" },
     { id: "careers", label: "Careers" },
   ];
 

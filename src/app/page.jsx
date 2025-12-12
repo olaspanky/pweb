@@ -40,9 +40,9 @@ export default function Page() {
           <PartnersSection />
         </ObservedSection>
 
-        <ObservedSection id="insights">
+        {/* <ObservedSection id="insights">
           <InsightsSection />
-        </ObservedSection>
+        </ObservedSection> */}
 
        
 
