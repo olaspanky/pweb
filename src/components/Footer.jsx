@@ -11,24 +11,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-10 md:mb-12">
           {/* Column 4 Navigation Columns */}
           <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
-            <Link href="#" className="hover:underline transition">About Us</Link>
-            <Link href="#" className="hover:underline transition">Our Company</Link>
-            <Link href="#" className="hover:underline transition">Contact Us</Link>
-            <Link href="#" className="hover:underline transition">Career</Link>
+            <Link href="/about" className="hover:underline transition">About Us</Link>
+            <Link href="/versus" className="hover:underline transition">Products</Link>
+            <Link href="/contact" className="hover:underline transition">Contact Us</Link>
+            <Link href="/career" className="hover:underline transition">Career</Link>
           </div>
 
           <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
-            <Link href="#" className="hover:underline transition">Products</Link>
+            <Link href="/versus" className="hover:underline transition">Products</Link>
             {/* Add more product links here if needed */}
           </div>
 
           <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
-            <Link href="#" className="hover:underline transition">Solutions</Link>
+            <Link href="/solutions" className="hover:underline transition">Solutions</Link>
             {/* Add more solution links here if needed */}
           </div>
 
           <div className="flex flex-col gap-4 text-grey-0 font-medium text-sm md:text-base">
-            <Link href="#" className="hover:underline transition">Testimonials</Link>
+            <Link href="/insights" className="hover:underline transition">Insights</Link>
             {/* Add more testimonial links here if needed */}
           </div>
 
