@@ -30,9 +30,7 @@ export default function Page() {
 
        
 
-        <ObservedSection id="careers">
-          <CareersSection />
-        </ObservedSection>
+    
 
         <ContactCard />
         <Footer />
