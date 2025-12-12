@@ -38,7 +38,7 @@ export default function BackedBy() {
                 <Image
                   src={logo.src}
                   alt="Backed by"
-                  width={90}
+                  width={120}
                   height={50}
                   className="object-contain w-full h-full"
                 />
