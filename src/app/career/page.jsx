@@ -7,9 +7,9 @@ import ObservedSection from "@/components/ObservedSection";
 import SectionNavigation from "@/components/SectionNavigation";
 import { SectionObserverProvider } from "@/contexts/SectionObserverContext";
 import CareersSection from "@/ui/about/CareersSection";
-import HeroSection from "@/ui/contact/HeroSection";
+import HeroSection from "@/ui/career/HeroSection";
 import InsightsSection from "@/ui/about/InsightsSection";
-import OurDifferenceSection from "@/ui/about/OurDifferenceSection";
+import OurDifferenceSection from "@/ui/career/OurDifferenceSection";
 import OurSolutions from "@/ui/about/OurSolutionsSection";
 import PartnersSection from "@/ui/about/PartnersSection";
 import ProductsSection from "@/ui/about/ProductsSection";
@@ -19,6 +19,7 @@ export default function Page() {
     <SectionObserverProvider>
       {/* Hero – no animation */}
       <HeroSection />
+      <OurDifferenceSection />
 
      
       <Footer />

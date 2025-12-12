@@ -21,7 +21,8 @@ export default function CareersPage() {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Application submitted successfully!');
   };
@@ -34,7 +35,7 @@ export default function CareersPage() {
           {/* Image */}
           <div className="order-2 lg:order-1">
             <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+              src="./images/cr1.png" 
               alt="Team collaboration" 
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -42,13 +43,13 @@ export default function CareersPage() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-8">
               We regard our workforce as highly as our customers
             </h1>
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   Growth Opportunities
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
@@ -57,7 +58,7 @@ export default function CareersPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   Diverse Teams
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
@@ -66,7 +67,7 @@ export default function CareersPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   Professional Development
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
@@ -75,7 +76,7 @@ export default function CareersPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   Global Outlook
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
@@ -100,7 +101,7 @@ export default function CareersPage() {
                 As we seek to deliver industry-shaping value to our clients, we are constantly screening candidates with experience or qualification in life sciences
               </p>
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <input
                     type="text"
@@ -109,6 +110,7 @@ export default function CareersPage() {
                     value={formData.firstName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
                   />
                   <input
                     type="text"
@@ -117,6 +119,7 @@ export default function CareersPage() {
                     value={formData.lastName}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
                   />
                 </div>
 
@@ -128,6 +131,7 @@ export default function CareersPage() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
                   />
                   <input
                     type="tel"
@@ -136,6 +140,7 @@ export default function CareersPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
                   />
                 </div>
 
@@ -144,6 +149,7 @@ export default function CareersPage() {
                   value={formData.country}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+                  required
                 >
                   <option value="">Choose country</option>
                   <option value="us">United States</option>
@@ -176,18 +182,18 @@ export default function CareersPage() {
                 </div>
 
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-lg transition duration-200"
                 >
                   Submit
                 </button>
-              </div>
+              </form>
             </div>
 
             {/* Image */}
             <div className="order-first lg:order-last">
               <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" 
+              src="./images/cr2.png" 
                 alt="Team celebration" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />

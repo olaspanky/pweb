@@ -30,7 +30,7 @@ export default function Navigation({ className }) {
       label: "About",
     },
     { href: "/partner", label: "Partnerships" },
-    { href: "/careers", label: "Careers" },
+    { href: "/career", label: "Careers" },
 
     ,
   ];
