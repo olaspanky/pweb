@@ -24,7 +24,7 @@ export default function Navigation({ className }) {
         { href: "/sonus", label: "Sonus" },
       ],
     },
-    { href: "/insights", label: "Insights" },
+    { href: "/https://whitepaper.pbrinsight.com/", label: "Insights" },
     {
       href: "/about",
       label: "About",
