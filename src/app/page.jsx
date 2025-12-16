@@ -19,7 +19,6 @@ export default function Page() {
       <SectionObserverProvider>
         <HeroSection />
 
-        <SectionNavigation />
 
         <BackedBy />
 
