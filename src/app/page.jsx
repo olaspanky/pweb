@@ -1,4 +1,4 @@
-import BackedBy from "@/components/BackedBy";
+import BackedBy from "@/components/BackedBy2";
 import ContactCard from "@/components/ContactCard";
 import Footer from "@/components/Footer";
 import ObservedSection from "@/components/ObservedSection";

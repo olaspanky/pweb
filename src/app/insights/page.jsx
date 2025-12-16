@@ -14,18 +14,19 @@ export default function Page() {
     <div className="w-[100vw] ">
       
       <SectionObserverProvider>
+        <div className="z-40">
         <HeroSection />
 
-<div className="mt-[-96]">
-        <SectionNavigation  />
+        </div>
+ {/* Correctly observed sections */}
+          <div className="mt-[-48] z-99">
 
-</div>
-
-        {/* Correctly observed sections */}
-        <ObservedSection id="difference">
           <OurDifferenceSection />
-        </ObservedSection>
+          </div>
 
+
+
+       
      
 
        

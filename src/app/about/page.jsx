@@ -13,6 +13,8 @@ import OurDifferenceSection from "@/ui/about/OurDifferenceSection";
 import OurSolutions from "@/ui/about/OurSolutionsSection";
 import PartnersSection from "@/ui/about/PartnersSection";
 import ProductsSection from "@/ui/about/ProductsSection";
+import FreeReportsSection from "@/components/Reports";
+
 
 export default function Page() {
   return (
@@ -37,14 +39,14 @@ export default function Page() {
       </ObservedSection>
 
       <ObservedSection id="partners">
-        <div className="bg-white/40">
+        <div className="">
         <PartnersSection />
 
         </div>
       </ObservedSection>
 
       <ObservedSection id="insights">
-        <InsightsSection />
+        <FreeReportsSection />
       </ObservedSection>
 
       {/* Optional Careers section (still commented out as in your original) */}
