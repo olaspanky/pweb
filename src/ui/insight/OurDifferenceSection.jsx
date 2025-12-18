@@ -156,13 +156,11 @@ const ReportCardCover = ({ report }) => {
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <h3 className="relative text-white font-bold text-lg text-center z-10">
-         
         </h3>
       </div>
     );
   }
 
-  // Fallback gradients based on section/type
   if (report.isFree || report.category?.toLowerCase().includes('white')) {
     return (
       <div className="aspect-[3/4] bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center p-6">
@@ -171,13 +169,38 @@ const ReportCardCover = ({ report }) => {
     );
   }
 
-  // Default for paid market reports or top section
   return (
     <div className="aspect-[3/4] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center p-6">
       <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
     </div>
   );
 };
+
+// Skeleton Card for report loading
+const ReportCardSkeleton = () => (
+  <div className="rounded-lg overflow-hidden shadow-md bg-white animate-pulse">
+    <div className="aspect-[3/4] bg-gray-300"></div>
+    <div className="p-4 space-y-3">
+      <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+      <div className="h-3 bg-gray-300 rounded w-full"></div>
+      <div className="h-3 bg-gray-300 rounded w-5/6"></div>
+      <div className="flex justify-between items-center mt-4">
+        <div className="h-5 bg-gray-300 rounded w-24"></div>
+        <div className="h-5 bg-gray-300 rounded w-16"></div>
+      </div>
+      <div className="mt-4 h-10 bg-gray-300 rounded"></div>
+    </div>
+  </div>
+);
+
+// Skeleton for section header
+const SectionHeaderSkeleton = () => (
+  <div className="space-y-4 animate-pulse">
+    <div className="h-8 bg-gray-300 rounded w-64"></div>
+    <div className="h-4 bg-gray-300 rounded w-full"></div>
+    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+  </div>
+);
 
 export default function ReportsPage() {
   const [allReports, setAllReports] = useState([]);
@@ -210,8 +233,6 @@ export default function ReportsPage() {
       setLoading(false);
     }
   };
-
-  console.log('All Reports:', allReports);
 
   const applyFilters = () => {
     let filtered = [...allReports];
@@ -286,17 +307,6 @@ export default function ReportsPage() {
     setSortBy('newest');
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading reports...</p>
-        </div>
-      </div>
-    );
-  }
-
   if (error) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -338,130 +348,167 @@ export default function ReportsPage() {
         </div>
       )}
 
-      {/* Top Report Section */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-900">Top Report Section</h2>
-          <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
-        </div>
-        
-        <p className="text-gray-600 mb-8 leading-relaxed">
-          Explore our collection of free whitepapers and paid market intelligence reports covering the latest trends, analyses, and forecasts in the pharmaceutical and life sciences industry.
-        </p>
+      {/* Loading State with Skeleton Loaders */}
+      {loading ? (
+        <>
+          {/* Top Report Section Skeleton */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <SectionHeaderSkeleton />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              {[...Array(4)].map((_, i) => (
+                <ReportCardSkeleton key={i} />
+              ))}
+            </div>
+          </section>
 
-        {topReports.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {topReports.map((report) => (
-              <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <ReportCardCover report={report} />
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">{report.category}</span>
-                    {report.isFree && <span className="text-xs text-green-600 font-semibold">FREE</span>}
+          {/* Whitepaper Section Skeleton */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <SectionHeaderSkeleton />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              {[...Array(4)].map((_, i) => (
+                <ReportCardSkeleton key={i} />
+              ))}
+            </div>
+          </section>
+
+          {/* Market Reports Section Skeleton */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <SectionHeaderSkeleton />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              {[...Array(4)].map((_, i) => (
+                <ReportCardSkeleton key={i} />
+              ))}
+            </div>
+          </section>
+        </>
+      ) : (
+        <>
+          {/* Top Report Section */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">Top Report Section</h2>
+              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
+            </div>
+            
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Explore our collection of free whitepapers and paid market intelligence reports covering the latest trends, analyses, and forecasts in the pharmaceutical and life sciences industry.
+            </p>
+
+            {topReports.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {topReports.map((report) => (
+                  <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
+                    <ReportCardCover report={report} />
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">{report.category}</span>
+                        {report.isFree && <span className="text-xs text-green-600 font-semibold">FREE</span>}
+                      </div>
+                      {report.downloadUrl && (
+                        <a 
+                          href={report.downloadUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block w-full text-center bg-blue-600 text-white py-2 rounded text-sm hover:bg-blue-700 transition-colors"
+                        >
+                          Download
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  {report.downloadUrl && (
-                    <a 
-                      href={report.downloadUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block w-full text-center bg-blue-600 text-white py-2 rounded text-sm hover:bg-blue-700 transition-colors"
-                    >
-                      Download
-                    </a>
-                  )}
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-gray-500 text-center py-8">No reports found matching your criteria.</p>
-        )}
-      </section>
+            ) : (
+              <p className="text-gray-500 text-center py-8">No reports found matching your criteria.</p>
+            )}
+          </section>
 
-      {/* Whitepaper Section */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-900">Whitepaper Section</h2>
-          <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
-        </div>
-        
-        <p className="text-gray-600 mb-8 leading-relaxed">
-          Access our free whitepapers to stay informed on critical industry topics.
-        </p>
+          {/* Whitepaper Section */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">Whitepaper Section</h2>
+              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
+            </div>
+            
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Access our free whitepapers to stay informed on critical industry topics.
+            </p>
 
-        {whitepapers.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {whitepapers.map((report) => (
-              <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <ReportCardCover report={report} />
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">{report.category}</span>
-                    <span className="text-xs text-green-600 font-semibold">FREE</span>
+            {whitepapers.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {whitepapers.map((report) => (
+                  <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
+                    <ReportCardCover report={report} />
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">{report.category}</span>
+                        <span className="text-xs text-green-600 font-semibold">FREE</span>
+                      </div>
+                      {report.downloadUrl && (
+                        <a 
+                          href={report.downloadUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block w-full text-center bg-green-600 text-white py-2 rounded text-sm hover:bg-green-700 transition-colors"
+                        >
+                          Download
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  {report.downloadUrl && (
-                    <a 
-                      href={report.downloadUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block w-full text-center bg-green-600 text-white py-2 rounded text-sm hover:bg-green-700 transition-colors"
-                    >
-                      Download
-                    </a>
-                  )}
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-gray-500 text-center py-8">No whitepapers found matching your criteria.</p>
-        )}
-      </section>
+            ) : (
+              <p className="text-gray-500 text-center py-8">No whitepapers found matching your criteria.</p>
+            )}
+          </section>
 
-      {/* Market Intelligence Reports Section */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-900">Market Intelligence Reports Section</h2>
-          <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
-        </div>
-        
-        <p className="text-gray-600 mb-8 leading-relaxed">
-          Our premium Market Intelligence Reports offer in-depth analyses for only $10 each.
-        </p>
+          {/* Market Intelligence Reports Section */}
+          <section className="max-w-7xl mx-auto px-4 py-12">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-3xl font-bold text-gray-900">Market Intelligence Reports Section</h2>
+              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
+            </div>
+            
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Our premium Market Intelligence Reports offer in-depth analyses for only $10 each.
+            </p>
 
-        {marketReports.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketReports.map((report) => (
-              <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <ReportCardCover report={report} />
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">{report.category}</span>
-                    {!report.isFree && <span className="text-xs text-purple-600 font-semibold">$10</span>}
+            {marketReports.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {marketReports.map((report) => (
+                  <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
+                    <ReportCardCover report={report} />
+                    <div className="p-4">
+                      <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">{report.category}</span>
+                        {!report.isFree && <span className="text-xs text-purple-600 font-semibold">$10</span>}
+                      </div>
+                      {report.downloadUrl && (
+                        <a 
+                          href={report.downloadUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block w-full text-center bg-purple-600 text-white py-2 rounded text-sm hover:bg-purple-700 transition-colors"
+                        >
+                          {report.isFree ? 'Download' : 'Purchase & Download'}
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  {report.downloadUrl && (
-                    <a 
-                      href={report.downloadUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="block w-full text-center bg-purple-600 text-white py-2 rounded text-sm hover:bg-purple-700 transition-colors"
-                    >
-                      {report.isFree ? 'Download' : 'Purchase & Download'}
-                    </a>
-                  )}
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-gray-500 text-center py-8">No market intelligence reports found.</p>
-        )}
-      </section>
+            ) : (
+              <p className="text-gray-500 text-center py-8">No market intelligence reports found.</p>
+            )}
+          </section>
+        </>
+      )}
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - remains visible even during loading */}
       <section className="max-w-7xl mx-auto px-4 py-16 overflow-hidden">
         <div className="text-center mb-4">
           <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">TESTIMONIALS</p>
