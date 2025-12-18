@@ -8,30 +8,17 @@ import CareersSection from "@/ui/insight/CareersSection";
 import HeroSection from "@/ui/insight/HeroSection";
 import OurDifferenceSection from "@/ui/insight/OurDifferenceSection";
 
-
 export default function Page() {
   return (
     <div className="w-[100vw] ">
-      
       <SectionObserverProvider>
         <div className="z-40">
-        <HeroSection />
-
+          <HeroSection />
         </div>
- {/* Correctly observed sections */}
-          <div className="mt-[-48] z-99">
-
+        {/* Correctly observed sections */}
+        <div className="mt-[-48] z-99">
           <OurDifferenceSection />
-          </div>
-
-
-
-       
-     
-
-       
-
-    
+        </div>
 
         <ContactCard />
         <Footer />
