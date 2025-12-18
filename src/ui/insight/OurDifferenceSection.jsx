@@ -49,7 +49,7 @@ const ReportSearchBar = ({ onSearch, onSort, onCategoryFilter, categories }) => 
   };
 
   return (
-    <div className=" px-4 py-6">
+    <div className="px-4 py-6">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-sm">
         <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center p-7 shadow-lg rounded-xl">
           {/* Search Input */}
@@ -146,6 +146,39 @@ const ReportSearchBar = ({ onSearch, onSort, onCategoryFilter, categories }) => 
   );
 };
 
+// Reusable Report Card Cover with background image support
+const ReportCardCover = ({ report }) => {
+  if (report.backgroundImage) {
+    return (
+      <div 
+        className="aspect-[3/4] bg-cover bg-center relative flex items-center justify-center p-6"
+        style={{ backgroundImage: `url(${report.backgroundImage})` }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <h3 className="relative text-white font-bold text-lg text-center z-10">
+         
+        </h3>
+      </div>
+    );
+  }
+
+  // Fallback gradients based on section/type
+  if (report.isFree || report.category?.toLowerCase().includes('white')) {
+    return (
+      <div className="aspect-[3/4] bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center p-6">
+        <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
+      </div>
+    );
+  }
+
+  // Default for paid market reports or top section
+  return (
+    <div className="aspect-[3/4] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center p-6">
+      <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
+    </div>
+  );
+};
+
 export default function ReportsPage() {
   const [allReports, setAllReports] = useState([]);
   const [filteredReports, setFilteredReports] = useState([]);
@@ -178,10 +211,11 @@ export default function ReportsPage() {
     }
   };
 
+  console.log('All Reports:', allReports);
+
   const applyFilters = () => {
     let filtered = [...allReports];
 
-    // Search filter
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase().trim();
       filtered = filtered.filter(report => 
@@ -190,7 +224,6 @@ export default function ReportsPage() {
       );
     }
 
-    // Category filter - now uses .includes() for flexibility (matches your section logic)
     if (categoryFilter !== 'all') {
       const filterLower = categoryFilter.toLowerCase().trim();
       filtered = filtered.filter(report => 
@@ -198,7 +231,6 @@ export default function ReportsPage() {
       );
     }
 
-    // Sort
     filtered = [...filtered].sort((a, b) => {
       switch (sortBy) {
         case 'newest':
@@ -283,7 +315,6 @@ export default function ReportsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Search Bar - EXACTLY as you had it */}
       <ReportSearchBar 
         onSearch={handleSearch}
         onSort={handleSort}
@@ -291,7 +322,6 @@ export default function ReportsPage() {
         categories={getUniqueCategories()}
       />
 
-      {/* Results Info + Clear Button */}
       {(searchQuery || categoryFilter !== 'all') && (
         <div className="max-w-7xl mx-auto px-4 py-4">
           <p className="text-gray-600">
@@ -308,7 +338,7 @@ export default function ReportsPage() {
         </div>
       )}
 
-      {/* Top Report Section - unchanged */}
+      {/* Top Report Section */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-900">Top Report Section</h2>
@@ -323,9 +353,7 @@ export default function ReportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topReports.map((report) => (
               <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <div className="aspect-[3/4] bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center p-6">
-                  <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
-                </div>
+                <ReportCardCover report={report} />
                 <div className="p-4">
                   <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
                   <div className="flex items-center justify-between mb-3">
@@ -351,7 +379,7 @@ export default function ReportsPage() {
         )}
       </section>
 
-      {/* Whitepaper Section - unchanged */}
+      {/* Whitepaper Section */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-900">Whitepaper Section</h2>
@@ -366,9 +394,7 @@ export default function ReportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whitepapers.map((report) => (
               <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <div className="aspect-[3/4] bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center p-6">
-                  <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
-                </div>
+                <ReportCardCover report={report} />
                 <div className="p-4">
                   <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
                   <div className="flex items-center justify-between mb-3">
@@ -394,7 +420,7 @@ export default function ReportsPage() {
         )}
       </section>
 
-      {/* Market Intelligence Reports Section - unchanged */}
+      {/* Market Intelligence Reports Section */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold text-gray-900">Market Intelligence Reports Section</h2>
@@ -409,9 +435,7 @@ export default function ReportsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {marketReports.map((report) => (
               <div key={report._id} className="rounded-lg overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow">
-                <div className="aspect-[3/4] bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center p-6">
-                  <h3 className="text-white font-bold text-lg text-center">{report.title}</h3>
-                </div>
+                <ReportCardCover report={report} />
                 <div className="p-4">
                   <p className="text-sm text-gray-600 mb-2 line-clamp-2">{report.description}</p>
                   <div className="flex items-center justify-between mb-3">
@@ -437,7 +461,7 @@ export default function ReportsPage() {
         )}
       </section>
 
-      {/* Testimonials Section - exactly as you had it */}
+      {/* Testimonials Section */}
       <section className="max-w-7xl mx-auto px-4 py-16 overflow-hidden">
         <div className="text-center mb-4">
           <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">TESTIMONIALS</p>
