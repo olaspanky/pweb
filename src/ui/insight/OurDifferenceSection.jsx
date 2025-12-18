@@ -387,7 +387,6 @@ export default function ReportsPage() {
           <section className="max-w-7xl mx-auto px-4 py-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-bold text-gray-900">Top Report Section</h2>
-              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
             </div>
             
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -428,7 +427,6 @@ export default function ReportsPage() {
           <section className="max-w-7xl mx-auto px-4 py-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-bold text-gray-900">Whitepaper Section</h2>
-              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
             </div>
             
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -469,7 +467,6 @@ export default function ReportsPage() {
           <section className="max-w-7xl mx-auto px-4 py-12">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-bold text-gray-900">Market Intelligence Reports Section</h2>
-              <a href="#" className="text-blue-600 hover:underline text-sm">View all reports</a>
             </div>
             
             <p className="text-gray-600 mb-8 leading-relaxed">
