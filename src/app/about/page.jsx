@@ -53,6 +53,8 @@ export default function Page() {
       {/* <ObservedSection id="careers">
         <CareersSection />
       </ObservedSection> */}
+<InsightsSection/>
+
 
       {/* Contact Card & Footer – no animation */}
       <ContactCard />
