@@ -114,12 +114,7 @@ export default function ImpactReportSection() {
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left side - Content */}
               <div className="p-12 flex flex-col justify-center space-y-6">
-                <div className="inline-flex items-center gap-2 bg-teal-500/20 backdrop-blur-sm rounded-lg px-4 py-2 w-fit">
-                  <FileText className="w-4 h-4 text-teal-400" />
-                  <span className="text-xs uppercase tracking-wider text-[white] font-semibold">
-                    FREE IMPACT REPORT
-                  </span>
-                </div>
+              
 
                 <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                   {impactReport.title.replace(/^PBR - /, '')}
