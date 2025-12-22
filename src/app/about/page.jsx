@@ -14,7 +14,7 @@ import OurSolutions from "@/ui/about/OurSolutionsSection";
 import PartnersSection from "@/ui/about/PartnersSection";
 import ProductsSection from "@/ui/about/ProductsSection";
 import FreeReportsSection from "@/components/Reports";
-
+import Testimonial from "@/ui/about/Testimonial";
 
 export default function Page() {
   return (
@@ -54,6 +54,7 @@ export default function Page() {
         <CareersSection />
       </ObservedSection> */}
 <InsightsSection/>
+<Testimonial/>
 
 
       {/* Contact Card & Footer – no animation */}
