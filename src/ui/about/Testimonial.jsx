@@ -1,5 +1,6 @@
 import React from 'react'
 import VideoPlayer from '@/components/VideoPlayer'
+import H2 from "@/components/Typography";
 
 const Testimonial = () => {
   return (
